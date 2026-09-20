@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs')%>    
+<%- include('partials/navbar.ejs')%>    
+
+    <h4 style="text-align: center;">Personagens Principais</h4>
+
+ 
+
+    <table border="1">
+        <tr>
+            <th>Nome: </th>
+            <th>Idade: </th>
+            <th>Descrição: </th>
+        </tr>
+        <% personagens.forEach(function(personagem){%>
+            <tr>
+                <td><%=personagem.nome%></td>
+                <td><%=personagem.idade%></td>
+                <td><%=personagem.descricao%></td>
+            </tr>
+
+        <%}) %>
+    </table>
+
+    <div class="personagens"> 
+        
+        <h5>Esses são alguns dos personagens que fazem parte do anime Diários de uma Apotecária:</h5>
+        <img src="/images/personagens.jpeg" alt="Personagens da tabela">
+        
+    </div>
+    <br><br>
+
+<%- include('partials/footer.ejs')%>    

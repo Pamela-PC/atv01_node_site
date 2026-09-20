@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs')%>    
+<%- include('partials/navbar.ejs')%> 
+
+   <h4 style="text-align: center;">Melhores Episódios</h4>
+    
+    <table border="1">
+        <tr>
+            <th>Episódio: </th>
+            <th>Resumo: </th>
+        </tr>
+        <% mlrsEpisodios.forEach(function(mlrEpisodio){%>
+            <tr>
+                <td><%=mlrEpisodio.episodio%></td>
+                <td><%=mlrEpisodio.resumo%></td>
+            </tr>
+
+        <%}) %>
+    </table>
+    <br><br>
+
+<%- include('partials/footer.ejs')%>    
